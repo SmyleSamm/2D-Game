@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 const SPEED = 80.0
 var RUNNING = 1.3
+var WOOD = 0
 
+func printTrees():
+	print("I have ",WOOD," wood!")
 func _physics_process(event):
 	var directionX := Input.get_axis("ui_left", "ui_right")
 	var directionY := Input.get_axis("ui_up", "ui_down")
