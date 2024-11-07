@@ -46,4 +46,13 @@ collision_mask = 2
 position = Vector2(16, -9)
 shape = SubResource("CircleShape2D_dg57g")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.128
+one_shot = true
+
+[node name="PositionNode" type="Node2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
