@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv7lsamofn6fn"]
+
+[ext_resource type="Script" path="res://scripts/tree_stump.gd" id="1_deef2"]
+[ext_resource type="Texture2D" uid="uid://cp1xoypqkqwnm" path="res://assets/sprites/farm objects free.png" id="2_img0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mpi76"]
+size = Vector2(2.43902, 2.22222)
+
+[node name="TreeStump" type="StaticBody2D"]
+script = ExtResource("1_deef2")
+
+[node name="Mine" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -6)
+scale = Vector2(6.56, 5.4)
+shape = SubResource("RectangleShape2D_mpi76")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.5, -6)
+texture = ExtResource("2_img0y")
+region_enabled = true
+region_rect = Rect2(102, 64, 35, 12)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

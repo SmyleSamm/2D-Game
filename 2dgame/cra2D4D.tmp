@@ -1,0 +1,486 @@
+[gd_scene load_steps=17 format=3 uid="uid://b55lwecpo8ylh"]
+
+[ext_resource type="Script" path="res://crafting_station.gd" id="1_680vj"]
+[ext_resource type="Texture2D" uid="uid://clir0wep20mrp" path="res://assets/sprites/SRW_Marketplace_tileset_B.png" id="2_haads"]
+[ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="3_su0yg"]
+[ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_kc7hs"]
+[ext_resource type="Texture2D" uid="uid://gybsn2debeah" path="res://assets/Items/Material/Wood Log.png" id="5_4eju8"]
+[ext_resource type="Texture2D" uid="uid://djff8g8874i45" path="res://assets/Items/Material/Wooden Plank.png" id="6_rmjai"]
+[ext_resource type="Texture2D" uid="uid://hpv4wspcx65w" path="res://assets/Items/Material/Rope.png" id="7_bpaap"]
+[ext_resource type="Texture2D" uid="uid://d0sws7d35kij6" path="res://assets/Items/Material/String.png" id="8_tupxo"]
+[ext_resource type="PackedScene" uid="uid://ddf2gmmxpckw3" path="res://crafting_ui.tscn" id="11_5wr1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxy2h"]
+size = Vector2(20, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gnsm"]
+radius = 25.1794
+
+[sub_resource type="Animation" id="Animation_08xmn"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_kam8a"]
+resource_name = "text"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hb43j"]
+_data = {
+"RESET": SubResource("Animation_08xmn"),
+"text": SubResource("Animation_kam8a")
+}
+
+[sub_resource type="GDScript" id="GDScript_1lg4q"]
+script/source = "extends Control
+
+var player
+
+@export var recource: String = \"\"
+
+@export var text1: Label
+@export var text2: Label
+@export var sprite1: Sprite2D
+@export var sprite2: Sprite2D
+var sprite3: Sprite2D = sprite2 
+
+@onready var count: Label = $count
+
+func set_player(play: CharacterBody2D) -> void:
+	player = play
+	
+func _on_increase_pressed() -> void:
+	if not player:
+		return
+
+
+func _on_decrease_pressed() -> void:
+	if not player:
+		return
+
+
+func _on_craft_pressed() -> void:
+	if not player:
+		return
+"
+
+[sub_resource type="GDScript" id="GDScript_8aiyq"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_craft_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_decrease_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_increase_pressed() -> void:
+	pass # Replace with function body.
+"
+
+[node name="crafting_station" type="StaticBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_680vj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_haads")
+region_enabled = true
+region_rect = Rect2(483, 675, 93, 90)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uxy2h")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_6gnsm")
+
+[node name="Label" type="Label" parent="."]
+z_index = 3
+offset_left = -53.0
+offset_top = -24.0
+offset_right = 52.0
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.147672, 0.147672, 0.147672, 1)
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 8
+text = "Press 'E' to open"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hb43j")
+}
+
+[node name="crafting_station_UI" type="CanvasLayer" parent="."]
+
+[node name="ColorRect2" type="ColorRect" parent="crafting_station_UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.470588)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="crafting_station_UI"]
+anchors_preset = -1
+anchor_left = 0.078125
+anchor_top = 0.138889
+anchor_right = 0.921875
+anchor_bottom = 0.861111
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.34902, 0.196078, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CraftingStation" type="Label" parent="crafting_station_UI/ColorRect"]
+layout_mode = 0
+anchor_left = 0.251852
+anchor_top = 0.00384615
+anchor_right = 0.681481
+anchor_bottom = 0.0923077
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "Crafting station"
+
+[node name="horizontal1" type="ColorRect" parent="crafting_station_UI/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0961538
+anchor_right = 1.0
+anchor_bottom = 0.111538
+metadata/_edit_use_anchors_ = true
+
+[node name="vertical1" type="ColorRect" parent="crafting_station_UI/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.416667
+anchor_top = 0.111538
+anchor_right = 0.416667
+anchor_bottom = 1.0
+offset_left = 4.00002
+offset_right = 235.0
+offset_bottom = -227.0
+rotation = 1.5708
+
+[node name="RecourceToItem" parent="crafting_station_UI/ColorRect" instance=ExtResource("11_5wr1h")]
+offset_top = 0.999962
+offset_bottom = 41.0
+
+[node name="WoodToPlank" type="Control" parent="crafting_station_UI/ColorRect"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_1lg4q")
+
+[node name="10Wood" type="Label" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 0
+anchor_left = 0.00185185
+anchor_top = 0.196154
+anchor_right = 0.0759259
+anchor_bottom = 0.284615
+offset_left = 0.925926
+offset_top = 43.1539
+offset_right = 29.963
+offset_bottom = 55.6154
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "10"
+
+[node name="Wood" type="Sprite2D" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+position = Vector2(65, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("5_4eju8")
+
+[node name="->" type="Label" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 0
+anchor_left = 0.185185
+anchor_top = 0.203846
+anchor_right = 0.259259
+anchor_bottom = 0.292308
+offset_left = 92.5925
+offset_top = 44.8461
+offset_right = 113.63
+offset_bottom = 57.3076
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "->"
+
+[node name="1Plank" type="Label" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235185
+anchor_top = 0.192308
+anchor_right = 0.309259
+anchor_bottom = 0.280769
+offset_left = 117.593
+offset_top = 42.3077
+offset_right = 130.63
+offset_bottom = 54.7693
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "1"
+
+[node name="Plank" type="Sprite2D" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+position = Vector2(175, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("6_rmjai")
+
+[node name="CraftPlank" type="Button" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 0
+anchor_left = 0.453704
+anchor_top = 0.184615
+anchor_right = 0.609259
+anchor_bottom = 0.276923
+offset_left = 226.852
+offset_top = 40.6153
+offset_right = 304.63
+offset_bottom = 60.923
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "Craft"
+metadata/action = "craft"
+metadata/item_name = "Planks"
+
+[node name="decreasePlank" type="Button" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.633333
+anchor_top = 0.311538
+anchor_right = 0.707407
+anchor_bottom = 0.403846
+offset_left = 316.667
+offset_top = 68.5384
+offset_right = 333.704
+offset_bottom = 88.846
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "-
+"
+metadata/action = "decrease"
+metadata/item_name = "Planks"
+
+[node name="increasePlank" type="Button" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.740741
+anchor_top = 0.315385
+anchor_right = 0.814815
+anchor_bottom = 0.407692
+offset_left = 370.371
+offset_top = 69.3847
+offset_right = 389.408
+offset_bottom = 89.6924
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "+"
+metadata/action = "increase"
+metadata/item_name = "Planks"
+
+[node name="Count" type="Label" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+layout_mode = 0
+anchor_left = 0.674074
+anchor_top = 0.2
+anchor_right = 0.777778
+anchor_bottom = 0.288462
+offset_left = 337.037
+offset_top = 44.0
+offset_right = 346.889
+offset_bottom = 56.4615
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Plank2" type="Sprite2D" parent="crafting_station_UI/ColorRect/WoodToPlank"]
+position = Vector2(486, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("6_rmjai")
+
+[node name="horizontal2" type="ColorRect" parent="crafting_station_UI/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.425444
+anchor_right = 1.0
+anchor_bottom = 0.440828
+offset_top = 0.384607
+offset_bottom = 0.384607
+metadata/_edit_use_anchors_ = true
+
+[node name="RopeToStrings" type="Control" parent="crafting_station_UI/ColorRect"]
+visible = false
+anchors_preset = 0
+offset_top = 82.0
+offset_right = 40.0
+offset_bottom = 122.0
+script = SubResource("GDScript_8aiyq")
+
+[node name="10Wood" type="Label" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00185185
+anchor_top = 0.196154
+anchor_right = 0.0759259
+anchor_bottom = 0.284615
+offset_left = 0.925926
+offset_top = 43.1539
+offset_right = 29.963
+offset_bottom = 55.6154
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "10"
+
+[node name="Rope" type="Sprite2D" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+position = Vector2(68, 65)
+scale = Vector2(2, 2)
+texture = ExtResource("7_bpaap")
+
+[node name="->" type="Label" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.185185
+anchor_top = 0.203846
+anchor_right = 0.259259
+anchor_bottom = 0.292308
+offset_left = 92.5925
+offset_top = 44.8461
+offset_right = 113.63
+offset_bottom = 57.3076
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "->"
+
+[node name="1Plank" type="Label" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235185
+anchor_top = 0.192308
+anchor_right = 0.309259
+anchor_bottom = 0.280769
+offset_left = 117.593
+offset_top = 42.3077
+offset_right = 130.63
+offset_bottom = 54.7693
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "1"
+
+[node name="Strings1" type="Sprite2D" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+position = Vector2(176, 65)
+scale = Vector2(2, 2)
+texture = ExtResource("8_tupxo")
+
+[node name="CraftStrings" type="Button" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453704
+anchor_top = 0.184615
+anchor_right = 0.609259
+anchor_bottom = 0.276923
+offset_left = 226.852
+offset_top = 40.6153
+offset_right = 304.63
+offset_bottom = 60.923
+theme_override_fonts/font = ExtResource("4_kc7hs")
+theme_override_font_sizes/font_size = 16
+text = "Craft"
+metadata/action = "craft"
+metadata/item_name = "Strings"
+
+[node name="decreaseStrings" type="Button" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.633333
+anchor_top = 0.311538
+anchor_right = 0.707407
+anchor_bottom = 0.403846
+offset_left = 316.667
+offset_top = 68.5384
+offset_right = 333.704
+offset_bottom = 88.846
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "-
+"
+metadata/action = "decrease"
+metadata/item_name = "Strings"
+
+[node name="increaseStrings" type="Button" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.740741
+anchor_top = 0.315385
+anchor_right = 0.814815
+anchor_bottom = 0.407692
+offset_left = 370.371
+offset_top = 69.3847
+offset_right = 389.408
+offset_bottom = 89.6924
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "+"
+metadata/action = "increase"
+metadata/item_name = "Strings"
+
+[node name="CraftingUIButton" parent="crafting_station_UI/ColorRect/RopeToStrings" instance=ExtResource("11_5wr1h")]
+layout_mode = 0
+
+[node name="Count" type="Label" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.674074
+anchor_top = 0.2
+anchor_right = 0.777778
+anchor_bottom = 0.288462
+offset_left = 337.037
+offset_top = 44.0
+offset_right = 346.889
+offset_bottom = 56.4615
+theme_override_fonts/font = ExtResource("3_su0yg")
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Strings2" type="Sprite2D" parent="crafting_station_UI/ColorRect/RopeToStrings"]
+position = Vector2(484, 66)
+scale = Vector2(2, 2)
+texture = ExtResource("8_tupxo")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/WoodToPlank/CraftPlank" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/WoodToPlank/decreasePlank" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/WoodToPlank/increasePlank" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/RopeToStrings/CraftStrings" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/RopeToStrings/decreaseStrings" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="crafting_station_UI/ColorRect/RopeToStrings/increaseStrings" to="." method="_on_button_pressed"]

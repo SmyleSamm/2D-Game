@@ -1,0 +1,508 @@
+[gd_scene load_steps=10 format=3 uid="uid://botb74tyiqe4k"]
+
+[ext_resource type="Script" path="res://inventory.gd" id="1_wilt2"]
+[ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_v6iuu"]
+[ext_resource type="Texture2D" uid="uid://gybsn2debeah" path="res://assets/Items/Material/Wood Log.png" id="3_lxq6w"]
+[ext_resource type="Texture2D" uid="uid://hpv4wspcx65w" path="res://assets/Items/Material/Rope.png" id="4_jhi4k"]
+[ext_resource type="Texture2D" uid="uid://d0sws7d35kij6" path="res://assets/Items/Material/String.png" id="5_78ctd"]
+[ext_resource type="Texture2D" uid="uid://c35rbsp1r4jr" path="res://assets/Items/Material/Wool.png" id="6_wisxn"]
+[ext_resource type="Texture2D" uid="uid://djff8g8874i45" path="res://assets/Items/Material/Wooden Plank.png" id="7_i4xn8"]
+[ext_resource type="Texture2D" uid="uid://dbpjmrj5xam05" path="res://assets/Items/Material/Fabric.png" id="8_6myai"]
+[ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="9_p21us"]
+
+[node name="Inventory" type="ColorRect"]
+light_mask = 16
+visibility_layer = 16
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.407843)
+script = ExtResource("1_wilt2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Stage1" type="ColorRect" parent="."]
+light_mask = 16
+visibility_layer = 16
+z_index = 10
+layout_mode = 0
+anchor_left = 0.0375
+anchor_top = 0.125
+anchor_right = 0.969375
+anchor_bottom = 0.941667
+offset_right = 255.6
+offset_bottom = 126.0
+scale = Vector2(0.7, 0.7)
+color = Color(0.34902, 0.196078, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Content" type="Label" parent="Stage1"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 1.0
+offset_right = 616.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 64
+text = "Stage 1"
+
+[node name="ColorRect" type="ColorRect" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = -0.509804
+anchor_top = 1.07813
+anchor_right = 1.57843
+anchor_bottom = 1.14063
+offset_left = 1.52588e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = -0.509804
+anchor_top = 2.79688
+anchor_right = 1.57843
+anchor_bottom = 2.85938
+offset_left = 1.52588e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = -0.509804
+anchor_top = 4.84375
+anchor_right = 1.57843
+anchor_bottom = 4.90625
+offset_left = 1.52588e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = 0.453428
+anchor_top = 1.14063
+anchor_right = 0.453428
+anchor_bottom = 6.54688
+offset_left = 4.00125
+offset_right = 350.001
+offset_bottom = -342.0
+rotation = 1.5708
+metadata/_edit_use_anchors_ = true
+
+[node name="Wood" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(-160, 121)
+scale = Vector2(3, 3)
+texture = ExtResource("3_lxq6w")
+
+[node name="Rope" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(-160, 247)
+scale = Vector2(3, 3)
+texture = ExtResource("4_jhi4k")
+
+[node name="Strings" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(246.286, 249)
+scale = Vector2(3, 3)
+texture = ExtResource("5_78ctd")
+
+[node name="Wool" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(-155.143, 371.857)
+scale = Vector2(3, 3)
+texture = ExtResource("6_wisxn")
+
+[node name="Plank" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(244, 128)
+scale = Vector2(3, 3)
+texture = ExtResource("7_i4xn8")
+
+[node name="Paper" type="Sprite2D" parent="Stage1/Content"]
+position = Vector2(245, 367)
+scale = Vector2(3, 3)
+texture = ExtResource("8_6myai")
+
+[node name="Label_Wood" type="Label" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = -0.252451
+anchor_top = 1.51563
+anchor_right = 0.433824
+anchor_bottom = 2.51563
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Rope" type="Label" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = -0.252451
+anchor_top = 3.40625
+anchor_right = 0.433824
+anchor_bottom = 4.40625
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Strings" type="Label" parent="Stage1/Content"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77521
+anchor_top = 3.42188
+anchor_right = 1.46149
+anchor_bottom = 4.42188
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Plank" type="Label" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = 0.764706
+anchor_top = 1.54688
+anchor_right = 1.45098
+anchor_bottom = 2.54688
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Wool" type="Label" parent="Stage1/Content"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.247199
+anchor_top = 5.3192
+anchor_right = 0.439075
+anchor_bottom = 6.3192
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label_Paper" type="Label" parent="Stage1/Content"]
+layout_mode = 0
+anchor_left = 0.764706
+anchor_top = 5.32813
+anchor_right = 1.45098
+anchor_bottom = 6.32813
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+metadata/_edit_use_anchors_ = true
+
+[node name="Stage2" type="ColorRect" parent="."]
+visible = false
+light_mask = 16
+visibility_layer = 16
+z_index = 10
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0375
+anchor_top = 0.125
+anchor_right = 0.969375
+anchor_bottom = 0.941667
+offset_right = 255.6
+offset_bottom = 126.0
+scale = Vector2(0.7, 0.7)
+color = Color(0.34902, 0.196078, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Content" type="Label" parent="Stage2"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 1.0
+offset_right = 616.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 64
+text = "Stage 2
+"
+
+[node name="ColorRect" type="ColorRect" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 69.0
+offset_right = 644.0
+offset_bottom = 73.0
+
+[node name="ColorRect2" type="ColorRect" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 179.0
+offset_right = 644.0
+offset_bottom = 183.0
+
+[node name="ColorRect3" type="ColorRect" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 310.0
+offset_right = 644.0
+offset_bottom = 314.0
+
+[node name="ColorRect4" type="ColorRect" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 73.0
+offset_right = 535.0
+offset_bottom = 77.0
+rotation = 1.5708
+
+[node name="Wood" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(-160, 121)
+scale = Vector2(3, 3)
+texture = ExtResource("3_lxq6w")
+
+[node name="Rope" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(-160, 247)
+scale = Vector2(3, 3)
+texture = ExtResource("4_jhi4k")
+
+[node name="Strings" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(-159, 370)
+scale = Vector2(3, 3)
+texture = ExtResource("5_78ctd")
+
+[node name="Wool" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(244, 249)
+scale = Vector2(3, 3)
+texture = ExtResource("6_wisxn")
+
+[node name="Plank" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(244, 128)
+scale = Vector2(3, 3)
+texture = ExtResource("7_i4xn8")
+
+[node name="Paper" type="Sprite2D" parent="Stage2/Content"]
+position = Vector2(245, 367)
+scale = Vector2(3, 3)
+texture = ExtResource("8_6myai")
+
+[node name="Label_Wood" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 97.0
+offset_right = 177.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Rope" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 218.0
+offset_right = 177.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Strings" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 341.0
+offset_right = 177.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Plank" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 99.0
+offset_right = 592.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Label_Wool" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 222.0
+offset_right = 592.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Label_Paper" type="Label" parent="Stage2/Content"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 341.0
+offset_right = 592.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Stage3" type="ColorRect" parent="."]
+visible = false
+light_mask = 16
+visibility_layer = 16
+z_index = 10
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0375
+anchor_top = 0.125
+anchor_right = 0.969375
+anchor_bottom = 0.941667
+offset_right = 255.6
+offset_bottom = 126.0
+scale = Vector2(0.7, 0.7)
+color = Color(0.34902, 0.196078, 0.054902, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Content" type="Label" parent="Stage3"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 1.0
+offset_right = 616.0
+offset_bottom = 65.0
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 64
+text = "Stage 3
+"
+
+[node name="ColorRect" type="ColorRect" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 69.0
+offset_right = 644.0
+offset_bottom = 73.0
+
+[node name="ColorRect2" type="ColorRect" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 179.0
+offset_right = 644.0
+offset_bottom = 183.0
+
+[node name="ColorRect3" type="ColorRect" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -208.0
+offset_top = 310.0
+offset_right = 644.0
+offset_bottom = 314.0
+
+[node name="ColorRect4" type="ColorRect" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 73.0
+offset_right = 535.0
+offset_bottom = 77.0
+rotation = 1.5708
+
+[node name="Wood" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(-160, 121)
+scale = Vector2(3, 3)
+texture = ExtResource("3_lxq6w")
+
+[node name="Rope" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(-160, 247)
+scale = Vector2(3, 3)
+texture = ExtResource("4_jhi4k")
+
+[node name="Strings" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(244.857, 251.857)
+scale = Vector2(3, 3)
+texture = ExtResource("5_78ctd")
+
+[node name="Wool" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(-156.571, 367.571)
+scale = Vector2(3, 3)
+texture = ExtResource("6_wisxn")
+
+[node name="Plank" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(244, 128)
+scale = Vector2(3, 3)
+texture = ExtResource("7_i4xn8")
+
+[node name="Paper" type="Sprite2D" parent="Stage3/Content"]
+position = Vector2(245, 367)
+scale = Vector2(3, 3)
+texture = ExtResource("8_6myai")
+
+[node name="Label_Wood" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 97.0
+offset_right = 177.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Rope" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -103.0
+offset_top = 218.0
+offset_right = 177.0
+offset_bottom = 282.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Strings" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = 314.857
+offset_top = 226.143
+offset_right = 594.857
+offset_bottom = 290.143
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 2
+
+[node name="Label_Plank" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 99.0
+offset_right = 592.0
+offset_bottom = 163.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Label_Wool" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = -105.143
+offset_top = 341.857
+offset_right = 174.857
+offset_bottom = 405.857
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Label_Paper" type="Label" parent="Stage3/Content"]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 341.0
+offset_right = 592.0
+offset_bottom = 405.0
+theme_override_fonts/font = ExtResource("9_p21us")
+theme_override_font_sizes/font_size = 64
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.03125
+anchor_top = 0.0138889
+anchor_right = 0.3375
+anchor_bottom = 0.125
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 32
+text = "Stage1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.339063
+anchor_top = 0.0138889
+anchor_right = 0.645312
+anchor_bottom = 0.125
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 32
+text = "Stage2
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.646875
+anchor_top = 0.0138889
+anchor_right = 0.953125
+anchor_bottom = 0.125
+theme_override_fonts/font = ExtResource("2_v6iuu")
+theme_override_font_sizes/font_size = 32
+text = "Stage3
+"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

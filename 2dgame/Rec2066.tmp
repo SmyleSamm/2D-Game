@@ -1,0 +1,142 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddf2gmmxpckw3"]
+
+[ext_resource type="Script" path="res://RecourceToItem.gd" id="1_qajej"]
+[ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_ajctx"]
+[ext_resource type="Texture2D" uid="uid://yg0hfnmd7tpd" path="res://assets/Items/Equipment/Bag.png" id="3_ngti7"]
+[ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="5_gb56e"]
+
+[node name="RecourceToItem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qajej")
+
+[node name="text1" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.00185185
+anchor_top = 0.196154
+anchor_right = 0.0759259
+anchor_bottom = 0.284615
+offset_left = 0.925926
+offset_top = 43.1539
+offset_right = 29.963
+offset_bottom = 55.6155
+theme_override_fonts/font = ExtResource("2_ajctx")
+theme_override_font_sizes/font_size = 16
+text = "10"
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(65, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ngti7")
+
+[node name="to" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.185185
+anchor_top = 0.203846
+anchor_right = 0.259259
+anchor_bottom = 0.292308
+offset_left = 92.5925
+offset_top = 44.8461
+offset_right = 113.63
+offset_bottom = 57.3076
+theme_override_fonts/font = ExtResource("2_ajctx")
+theme_override_font_sizes/font_size = 16
+text = "->"
+
+[node name="text2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235185
+anchor_top = 0.192308
+anchor_right = 0.309259
+anchor_bottom = 0.280769
+offset_left = 117.593
+offset_top = 42.3077
+offset_right = 130.63
+offset_bottom = 54.7693
+theme_override_fonts/font = ExtResource("2_ajctx")
+theme_override_font_sizes/font_size = 16
+text = "1"
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(175, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ngti7")
+
+[node name="craft" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.453704
+anchor_top = 0.184615
+anchor_right = 0.609259
+anchor_bottom = 0.276923
+offset_left = 226.852
+offset_top = 40.6153
+offset_right = 304.63
+offset_bottom = 60.923
+theme_override_fonts/font = ExtResource("2_ajctx")
+theme_override_font_sizes/font_size = 16
+text = "Craft"
+metadata/action = "craft"
+metadata/item_name = "Planks"
+
+[node name="decrease" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.633333
+anchor_top = 0.311538
+anchor_right = 0.707407
+anchor_bottom = 0.403846
+offset_left = 316.667
+offset_top = 68.5384
+offset_right = 333.704
+offset_bottom = 88.8461
+theme_override_fonts/font = ExtResource("5_gb56e")
+theme_override_font_sizes/font_size = 16
+text = "-
+"
+metadata/action = "decrease"
+metadata/item_name = "Planks"
+
+[node name="increase" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.740741
+anchor_top = 0.315385
+anchor_right = 0.814815
+anchor_bottom = 0.407692
+offset_left = 370.371
+offset_top = 69.3847
+offset_right = 389.408
+offset_bottom = 89.6924
+theme_override_fonts/font = ExtResource("5_gb56e")
+theme_override_font_sizes/font_size = 16
+text = "+"
+metadata/action = "increase"
+metadata/item_name = "Planks"
+
+[node name="count" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.674074
+anchor_top = 0.2
+anchor_right = 0.777778
+anchor_bottom = 0.288462
+offset_left = 337.037
+offset_top = 44.0
+offset_right = 346.889
+offset_bottom = 56.4615
+theme_override_fonts/font = ExtResource("5_gb56e")
+theme_override_font_sizes/font_size = 16
+text = "0
+"
+horizontal_alignment = 2
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(486, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ngti7")
+
+[connection signal="pressed" from="craft" to="." method="_on_craft_pressed"]
+[connection signal="pressed" from="decrease" to="." method="_on_decrease_pressed"]
+[connection signal="pressed" from="increase" to="." method="_on_increase_pressed"]

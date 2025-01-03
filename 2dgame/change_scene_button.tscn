@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://pc6tff5rr8xh"]
+
+[ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="1_hok2x"]
+[ext_resource type="Script" path="res://change_scene_button.gd" id="1_m3tj1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qiwtw"]
+bg_color = Color(0.0807833, 0.0807834, 0.0807833, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b88mm"]
+bg_color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="ChangeSceneButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_hok2x")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = SubResource("StyleBoxFlat_qiwtw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b88mm")
+script = ExtResource("1_m3tj1")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

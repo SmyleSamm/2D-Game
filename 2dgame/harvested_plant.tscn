@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuadv1nffxfc7"]
+
+[ext_resource type="Script" path="res://harvested_plant.gd" id="1_ocm4i"]
+[ext_resource type="Texture2D" uid="uid://ctsl04l10k63r" path="res://assets/sprites/plants free.png" id="2_d56t0"]
+
+[node name="harvested_plant" type="Node2D"]
+script = ExtResource("1_ocm4i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_d56t0")
+region_enabled = true
+region_rect = Rect2(19, 24, 9, 6)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

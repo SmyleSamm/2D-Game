@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://buh80fmiavo1m"]
+
+[ext_resource type="PackedScene" uid="uid://ddf2gmmxpckw3" path="res://RecourceToItem.tscn" id="1_jksxf"]
+[ext_resource type="Texture2D" uid="uid://bw1dte7ki6b5h" path="res://assets/Items/Weapon & Tool/Wooden Sword.png" id="2_7ayme"]
+[ext_resource type="Texture2D" uid="uid://cqg3wpixb8wri" path="res://assets/Items/Weapon & Tool/Wooden Staff.png" id="3_8slsc"]
+[ext_resource type="Texture2D" uid="uid://bjxhjf80lssxh" path="res://assets/Items/Weapon & Tool/Wooden Shield.png" id="4_nx2d0"]
+[ext_resource type="Texture2D" uid="uid://50dg7e0bil77" path="res://assets/Items/Weapon & Tool/Torch.png" id="5_a03o2"]
+
+[node name="CraftingStationUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0784314, 0.0784314, 0.0784314, 0.768627)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -143.0
+offset_right = 284.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 105
+
+[node name="RecourceToItem" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jksxf")]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_vertical = 3
+text1 = "12"
+sprite1 = ExtResource("2_7ayme")
+sprite2 = ExtResource("2_7ayme")
+
+[node name="RecourceToItem2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jksxf")]
+layout_mode = 2
+size_flags_vertical = 3
+text1 = "100"
+sprite1 = ExtResource("3_8slsc")
+sprite2 = ExtResource("3_8slsc")
+
+[node name="RecourceToItem3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jksxf")]
+layout_mode = 2
+size_flags_vertical = 3
+text1 = "1000"
+sprite1 = ExtResource("4_nx2d0")
+sprite2 = ExtResource("4_nx2d0")
+
+[node name="RecourceToItem4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("1_jksxf")]
+layout_mode = 2
+size_flags_vertical = 3
+text1 = "10000"
+sprite1 = ExtResource("5_a03o2")
+sprite2 = ExtResource("5_a03o2")
