@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bdx528atp6xm8"]
 
 [ext_resource type="Texture2D" uid="uid://druq6vejds5pq" path="res://assets/sprites/portrait female.png" id="1_arlr3"]
-[ext_resource type="Script" path="res://interactToChangeScene.gd" id="1_w3g4t"]
+[ext_resource type="Script" uid="uid://b7pyh6hawiqjl" path="res://interactToChangeScene.gd" id="1_w3g4t"]
 [ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_ta0bq"]
 [ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="3_pbrwc"]
 [ext_resource type="PackedScene" uid="uid://pc6tff5rr8xh" path="res://change_scene_button.tscn" id="6_8i1nb"]
@@ -135,8 +135,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wqc7v"]
 _data = {
-"RESET": SubResource("Animation_a7730"),
-"new_animation": SubResource("Animation_jl6ic")
+&"RESET": SubResource("Animation_a7730"),
+&"new_animation": SubResource("Animation_jl6ic")
 }
 
 [node name="MainMenu" type="Control"]
@@ -150,7 +150,7 @@ script = ExtResource("1_w3g4t")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_wqc7v")
+&"": SubResource("AnimationLibrary_wqc7v")
 }
 autoplay = "new_animation"
 

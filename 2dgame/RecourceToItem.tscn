@@ -1,13 +1,17 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddf2gmmxpckw3"]
 
-[ext_resource type="Script" path="res://RecourceToItem.gd" id="1_qajej"]
+[ext_resource type="Script" uid="uid://ccrl0orj6dq0f" path="res://RecourceToItem.gd" id="1_qajej"]
 [ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_ajctx"]
 [ext_resource type="Texture2D" uid="uid://yg0hfnmd7tpd" path="res://assets/Items/Equipment/Bag.png" id="3_ngti7"]
 [ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="5_gb56e"]
 
 [node name="RecourceToItem" type="Control"]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 0.898438
+anchor_bottom = 0.286111
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_qajej")
 metadata/_edit_use_anchors_ = true
 
@@ -27,8 +31,9 @@ metadata/item_name = "Planks"
 layout_mode = 2
 offset_left = 464.0
 offset_top = 78.0
-offset_right = 484.0
-offset_bottom = 102.0
+offset_right = 486.0
+offset_bottom = 118.0
+scale = Vector2(1, 0.6)
 theme_override_fonts/font = ExtResource("5_gb56e")
 theme_override_font_sizes/font_size = 16
 text = "-
@@ -48,62 +53,71 @@ text = "+"
 metadata/action = "increase"
 metadata/item_name = "Planks"
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_constants/separation = 235
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+offset_right = 270.0
+offset_bottom = 70.0
 theme_override_constants/separation = 5
 
-[node name="text1" type="Label" parent="HBoxContainer3/HBoxContainer"]
+[node name="text1" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ajctx")
 theme_override_font_sizes/font_size = 16
-text = "100"
+text = "10"
+horizontal_alignment = 2
 
-[node name="Sprite1" type="TextureRect" parent="HBoxContainer3/HBoxContainer"]
+[node name="Sprite1" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 texture = ExtResource("3_ngti7")
 stretch_mode = 4
 
-[node name="to" type="Label" parent="HBoxContainer3/HBoxContainer"]
+[node name="to" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ajctx")
 theme_override_font_sizes/font_size = 16
 text = "->"
 
-[node name="text2" type="Label" parent="HBoxContainer3/HBoxContainer"]
+[node name="text2" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ajctx")
 theme_override_font_sizes/font_size = 16
 text = "1"
 
-[node name="Sprite2" type="TextureRect" parent="HBoxContainer3/HBoxContainer"]
+[node name="Sprite2" type="TextureRect" parent="HBoxContainer"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 texture = ExtResource("3_ngti7")
 stretch_mode = 4
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer3"]
-layout_mode = 2
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.789565
+anchor_top = 0.0450449
+anchor_right = 0.942609
+anchor_bottom = 0.675677
+offset_top = 2.28882e-05
+offset_bottom = -2.28882e-05
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="count" type="Label" parent="HBoxContainer3/HBoxContainer2"]
+[node name="count" type="Label" parent="HBoxContainer2"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("5_gb56e")
 theme_override_font_sizes/font_size = 16
 text = "0
 "
 horizontal_alignment = 2
+vertical_alignment = 3
 
-[node name="Sprite3" type="TextureRect" parent="HBoxContainer3/HBoxContainer2"]
+[node name="Sprite3" type="TextureRect" parent="HBoxContainer2"]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 texture = ExtResource("3_ngti7")
-expand_mode = 3
 stretch_mode = 4
 
 [connection signal="pressed" from="craft" to="." method="_on_craft_pressed"]

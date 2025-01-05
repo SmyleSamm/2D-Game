@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://botb74tyiqe4k"]
 
-[ext_resource type="Script" path="res://inventory.gd" id="1_wilt2"]
+[ext_resource type="Script" uid="uid://da58wjrai0d76" path="res://inventory.gd" id="1_wilt2"]
 [ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_v6iuu"]
 [ext_resource type="Texture2D" uid="uid://gybsn2debeah" path="res://assets/Items/Material/Wood Log.png" id="3_lxq6w"]
 [ext_resource type="Texture2D" uid="uid://hpv4wspcx65w" path="res://assets/Items/Material/Rope.png" id="4_jhi4k"]
@@ -140,10 +140,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Label_Strings" type="Label" parent="Stage1/Content"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.77521
-anchor_top = 3.42188
-anchor_right = 1.46149
-anchor_bottom = 4.42188
+anchor_left = 0.764706
+anchor_top = 3.39955
+anchor_right = 1.45098
+anchor_bottom = 4.39955
 theme_override_fonts/font = ExtResource("9_p21us")
 theme_override_font_sizes/font_size = 64
 metadata/_edit_use_anchors_ = true

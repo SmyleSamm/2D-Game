@@ -527,8 +527,9 @@ drag_top_margin = 0.01
 drag_right_margin = 0.01
 drag_bottom_margin = 0.01
 
-[node name="crafting_station" parent="GameObjects" instance=ExtResource("6_7pttj")]
+[node name="crafting_station" parent="GameObjects" node_paths=PackedStringArray("player") instance=ExtResource("6_7pttj")]
 position = Vector2(417, -300)
+player = NodePath("../Enteties/Player")
 
 [node name="Objects" type="Node" parent="GameObjects"]
 

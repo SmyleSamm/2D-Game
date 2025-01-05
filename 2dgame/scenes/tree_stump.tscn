@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bv7lsamofn6fn"]
 
-[ext_resource type="Script" path="res://scripts/tree_stump.gd" id="1_deef2"]
+[ext_resource type="Script" uid="uid://dotlf2g8rc4m5" path="res://scripts/tree_stump.gd" id="1_deef2"]
 [ext_resource type="Texture2D" uid="uid://cp1xoypqkqwnm" path="res://assets/sprites/farm objects free.png" id="2_img0y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpi76"]
