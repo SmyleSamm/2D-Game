@@ -105,6 +105,9 @@ craftetItemsRecieved = Dictionary[String, int]({
 spriteOfRecource = ExtResource("7_bpaap")
 spriteOfItem = ExtResource("8_tupxo")
 
+[node name="RecourceToItem3" parent="CanvasLayer/CraftingStationUI/ScrollContainer/VBoxContainer" index="2" instance=ExtResource("11_5wr1h")]
+layout_mode = 2
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 
