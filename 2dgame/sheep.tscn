@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://cqiw1w7ujin6f"]
 
-[ext_resource type="Script" path="res://sheep.gd" id="1_agt62"]
+[ext_resource type="Script" uid="uid://cf2y5xfdmwop5" path="res://sheep.gd" id="1_agt62"]
 [ext_resource type="Texture2D" uid="uid://cggl815sn5iaw" path="res://assets/animals/sheep/fluffy white sheep sheet.png" id="2_hd17r"]
 [ext_resource type="Texture2D" uid="uid://wsbu7u12m7ex" path="res://assets/animals/sheep/white sheep sheet.png" id="2_wmr8f"]
 
