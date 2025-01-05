@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://csdcycxtjj1vq"]
 
-[ext_resource type="Script" path="res://plant.gd" id="1_0py38"]
+[ext_resource type="Script" uid="uid://cq0loynlvtsps" path="res://plant.gd" id="1_0py38"]
 [ext_resource type="Texture2D" uid="uid://cp1xoypqkqwnm" path="res://assets/sprites/farm objects free.png" id="1_uhns6"]
 [ext_resource type="AudioStream" uid="uid://dilnl7eer1n0i" path="res://assets/sounds/tap.wav" id="3_jnv3u"]
 
