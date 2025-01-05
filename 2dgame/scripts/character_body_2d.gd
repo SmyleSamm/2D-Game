@@ -3,9 +3,9 @@ extends CharacterBody2D
 @onready var inventoryUI: ColorRect = $UI/Inventory
 @onready var esc_menu: Control = $"UI/ESC Menu"
 
-const SPEED = 80.0
-var RUNNING = 1.3
-var WOOD = 0
+const SPEED: float = 80.0
+var RUNNING: float = 1.3
+var WOOD: int= 0
 var inventory = [
 	["Wood", 1000],
 	["Rope", 1000],
@@ -15,16 +15,16 @@ var inventory = [
 	["Paper", 1000]
 ]
 
-var runs = 0
-var facingRight = 1
+var runs: int = 0
+var facingRight: int = 1
 var direction = 0
 
-var isWalking 
+var isWalking: bool 
 
 #UI relevant variables
-var isUIOpen = false
+var isUIOpen: int = false
 #should be currentUI: Control <- because crafting_station_UI is a CanvasLayer?!?!?!
-var currentUI
+var currentUI: Control
 
 func getItemCount(name: String) -> int:
 	for item in inventory:
@@ -82,30 +82,31 @@ func canOpenNewUI() -> bool:
 	return !currentUI and !isUIOpen
 	
 #should be ui: Control <- because crafting_station_UI is a CanvasLayer?!?!?!
-func openUI(ui) -> void:
+func openUI(ui: Control) -> void:
 	ui.show()
 	currentUI = ui
 	isUIOpen = true
 	
 #should be ui: Control <- because crafting_station_UI is a CanvasLayer?!?!?!
-func closeUI(ui) -> void:
+func closeUI(ui: Control) -> void:
 	ui.hide()
 	currentUI = null
 	isUIOpen = false
 	
 #should be ui: Control <- because crafting_station_UI is a CanvasLayer?!?!?!
-func changeUI(ui) -> void:
+func changeUI(ui: Control) -> void:
 	ui.hide()
 	currentUI = ui.befor
 	currentUI.show()
 	
 #should be passedUI: Control <- because crafting_station_UI is a CanvasLayer?!?!?!
-func handelUIRequest(passedUI) -> void:
+func handelUIRequest(passedUI: Control) -> void:
 	if canOpenNewUI():
 		openUI(passedUI)
+		return
 	elif currentUI == passedUI:
 		closeUI(passedUI)
-		
+		return
 func handelPlayerInput() -> void:
 	if Input.is_action_just_pressed("ESC"):
 		if isUIOpen:
