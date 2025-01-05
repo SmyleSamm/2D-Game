@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://cj4qecbhvbkjb"]
 
-[ext_resource type="Script" path="res://broken_bridge.gd" id="1_tcgns"]
+[ext_resource type="Script" uid="uid://djtw6jf5txd48" path="res://broken_bridge.gd" id="1_tcgns"]
 [ext_resource type="Texture2D" uid="uid://ub2bj64vjg35" path="res://assets/sprites/summer tilemap.png" id="2_2y53k"]
 [ext_resource type="Texture2D" uid="uid://b03dlpowhvupg" path="res://assets/sprites/summer and spring items.png" id="3_2ixgg"]
 [ext_resource type="Texture2D" uid="uid://cw6ugnyn6a346" path="res://assets/sprites/farm bridges free.png" id="4_eutp8"]
