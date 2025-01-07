@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://qw0drsdfa44p"]
 
 [ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="1_f1pij"]
-[ext_resource type="Script" path="res://change_variable_button.gd" id="2_lx2v6"]
+[ext_resource type="Script" uid="uid://dvf6yodtetjja" path="res://ui/elements/buttons/change_variable_button.gd" id="2_lx2v6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qiwtw"]
 bg_color = Color(0.0807833, 0.0807834, 0.0807833, 1)

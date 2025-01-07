@@ -1,17 +1,17 @@
 [gd_scene load_steps=14 format=3 uid="uid://dd4ct6cerdn0v"]
 
-[ext_resource type="PackedScene" uid="uid://qo3l14yvp1j" path="res://scenes/player.tscn" id="1_1ryak"]
-[ext_resource type="Texture2D" uid="uid://ub2bj64vjg35" path="res://assets/sprites/summer tilemap.png" id="1_3vuen"]
-[ext_resource type="Texture2D" uid="uid://b03dlpowhvupg" path="res://assets/sprites/summer and spring items.png" id="2_5dr5e"]
-[ext_resource type="Texture2D" uid="uid://cw6ugnyn6a346" path="res://assets/sprites/farm bridges free.png" id="3_ddhef"]
-[ext_resource type="PackedScene" uid="uid://ca1fgc25b6y4t" path="res://scenes/trees.tscn" id="5_8s3os"]
-[ext_resource type="PackedScene" uid="uid://b55lwecpo8ylh" path="res://crafting_station.tscn" id="6_7pttj"]
-[ext_resource type="PackedScene" uid="uid://cj4qecbhvbkjb" path="res://broken_bridge.tscn" id="8_7dqka"]
-[ext_resource type="PackedScene" uid="uid://csdcycxtjj1vq" path="res://plant.tscn" id="8_864wn"]
-[ext_resource type="PackedScene" uid="uid://cqiw1w7ujin6f" path="res://sheep.tscn" id="9_ew3t7"]
+[ext_resource type="Texture2D" uid="uid://ub2bj64vjg35" path="res://assets/sprites/summer tilemap.png" id="1_7dmtp"]
+[ext_resource type="Texture2D" uid="uid://b03dlpowhvupg" path="res://assets/sprites/summer and spring items.png" id="2_kv6o6"]
+[ext_resource type="Texture2D" uid="uid://cw6ugnyn6a346" path="res://assets/sprites/farm bridges free.png" id="3_stivx"]
+[ext_resource type="PackedScene" uid="uid://cj4qecbhvbkjb" path="res://scenes/objects/broken_bridge.tscn" id="4_len3b"]
+[ext_resource type="PackedScene" uid="uid://qo3l14yvp1j" path="res://objects/enteties/player/player.tscn" id="5_i4uej"]
+[ext_resource type="PackedScene" uid="uid://b55lwecpo8ylh" path="res://scenes/objects/crafting_station.tscn" id="6_oe4fx"]
+[ext_resource type="PackedScene" uid="uid://csdcycxtjj1vq" path="res://objects/vegetation/plants/normalPlant/blossoming/plant.tscn" id="7_u5s7t"]
+[ext_resource type="PackedScene" uid="uid://ca1fgc25b6y4t" path="res://scenes/objects/vegetation/trees.tscn" id="8_sctqq"]
+[ext_resource type="PackedScene" uid="uid://cqiw1w7ujin6f" path="res://objects/enteties/sheep/sheep.tscn" id="9_v4cxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ltchk"]
-texture = ExtResource("1_3vuen")
+texture = ExtResource("1_7dmtp")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -176,7 +176,7 @@ texture = ExtResource("1_3vuen")
 7:14/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2jq6t"]
-texture = ExtResource("2_5dr5e")
+texture = ExtResource("2_kv6o6")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -339,7 +339,7 @@ texture = ExtResource("2_5dr5e")
 11:16/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_468k2"]
-texture = ExtResource("3_ddhef")
+texture = ExtResource("3_stivx")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -503,7 +503,7 @@ layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array(-393229, 131072, 8, -327693, 131072, 8, -262157, 131072, 8, -196621, 131072, 8, -131085, 131072, 8, -65549, 131072, 8, -13, 131072, 8, 65523, 65536, 6, 65522, 196608, 7, 65521, 196608, 7, 65520, 196608, 7, -14, 196608, 1, -15, 196608, 1, -16, 196608, 1, -65552, 196608, 1, -65551, 196608, 1, -131087, 196608, 1, -131086, 196608, 1, -65550, 196608, 1, -196622, 196608, 1, -262158, 196608, 1, -327694, 196608, 1, -393230, 196608, 1, -393231, 196608, 1, -327696, 196608, 1, -262160, 196608, 1, -196624, 196608, 1, -196623, 196608, 1, -262159, 196608, 1, -327695, 196608, 1, -393232, 196608, 1, -131088, 196608, 1, -458765, 131072, 8, -524301, 131072, 8, -589837, 131072, 8, -655373, 131072, 8, -720909, 131072, 8, -786445, 131072, 7, -786444, 196608, 7, -786443, 196608, 7, -786442, 196608, 7, -786441, 196608, 7, -786440, 196608, 7, -786439, 196608, 7, -851974, 131072, 7, -851973, 196608, 7, -851972, 196608, 7, -851971, 196608, 7, -851970, 196608, 7, -851969, 196608, 7, -917504, 196608, 7, -917503, 65536, 6, -983038, 196608, 7, -983037, 196608, 7, -983036, 196608, 7, -983035, 196608, 7, -983034, 196608, 7, -983033, 196608, 7, -983032, 196608, 7, -983031, 196608, 7, -983030, 196608, 7, -1048565, 131072, 8, -1114101, 131072, 8, -1179637, 131072, 7, -1245172, 131072, 8, -1310708, 131072, 8, -1376244, 131072, 8, -983029, 65536, 6, -1179636, 65536, 6, -983039, 131072, 7, -851975, 196608, 1, -786438, 65536, 6, -851976, 196608, 1, -851977, 196608, 1, -851978, 196608, 1, -851979, 196608, 1, -851980, 196608, 1, -851981, 196608, 1, -917517, 196608, 1, -917516, 196608, 1, -917515, 196608, 1, -917514, 196608, 1, -917513, 196608, 1, -917512, 196608, 1, -917511, 196608, 1, -917510, 196608, 1, -917509, 196608, 1, -917508, 196608, 1, -917507, 196608, 1, -917506, 196608, 1, -917505, 196608, 1, -983040, 196608, 1, -1310733, 196608, 1, -1245197, 196608, 1, -1179661, 196608, 1, -1114125, 196608, 1, -1048589, 196608, 1, -983053, 196608, 1, -1310732, 196608, 1, -1245196, 196608, 1, -1179660, 196608, 1, -1114124, 196608, 1, -1048588, 196608, 1, -983052, 196608, 1, -1310731, 196608, 1, -1245195, 196608, 1, -1179659, 196608, 1, -1114123, 196608, 1, -1048587, 196608, 1, -983051, 196608, 1, -1310730, 196608, 1, -1245194, 196608, 1, -1179658, 196608, 1, -1114122, 196608, 1, -1048586, 196608, 1, -983050, 196608, 1, -1310729, 196608, 1, -1245193, 196608, 1, -1179657, 196608, 1, -1114121, 196608, 1, -1048585, 196608, 1, -983049, 196608, 1, -1310728, 196608, 1, -1245192, 196608, 1, -1179656, 196608, 1, -1114120, 196608, 1, -1048584, 196608, 1, -983048, 196608, 1, -1310727, 196608, 1, -1245191, 196608, 1, -1179655, 196608, 1, -1114119, 196608, 1, -1048583, 196608, 1, -983047, 196608, 1, -1310726, 196608, 1, -1245190, 196608, 1, -1179654, 196608, 1, -1114118, 196608, 1, -1048582, 196608, 1, -983046, 196608, 1, -1310725, 196608, 1, -1245189, 196608, 1, -1179653, 196608, 1, -1114117, 196608, 1, -1048581, 196608, 1, -983045, 196608, 1, -1310724, 196608, 1, -1245188, 196608, 1, -1179652, 196608, 1, -1114116, 196608, 1, -1048580, 196608, 1, -983044, 196608, 1, -1310723, 196608, 1, -1245187, 196608, 1, -1179651, 196608, 1, -1114115, 196608, 1, -1048579, 196608, 1, -983043, 196608, 1, -1310722, 196608, 1, -1245186, 196608, 1, -1179650, 196608, 1, -1114114, 196608, 1, -1048578, 196608, 1, -983042, 196608, 1, -1310721, 196608, 1, -1245185, 196608, 1, -1179649, 196608, 1, -1114113, 196608, 1, -1048577, 196608, 1, -983041, 196608, 1, -1376256, 196608, 1, -1310720, 196608, 1, -1245184, 196608, 1, -1179648, 196608, 1, -1114112, 196608, 1, -1048576, 196608, 1, -1376255, 196608, 1, -1310719, 196608, 1, -1245183, 196608, 1, -1179647, 196608, 1, -1114111, 196608, 1, -1048575, 196608, 1, -1376254, 196608, 1, -1310718, 196608, 1, -1245182, 196608, 1, -1179646, 196608, 1, -1114110, 196608, 1, -1048574, 196608, 1, -1376253, 196608, 1, -1310717, 196608, 1, -1245181, 196608, 1, -1179645, 196608, 1, -1114109, 196608, 1, -1048573, 196608, 1, -1376252, 196608, 1, -1310716, 196608, 1, -1245180, 196608, 1, -1179644, 196608, 1, -1114108, 196608, 1, -1048572, 196608, 1, -1376251, 196608, 1, -1310715, 196608, 1, -1245179, 196608, 1, -1179643, 196608, 1, -1114107, 196608, 1, -1048571, 196608, 1, -1376250, 196608, 1, -1310714, 196608, 1, -1245178, 196608, 1, -1179642, 196608, 1, -1114106, 196608, 1, -1048570, 196608, 1, -1376249, 196608, 1, -1310713, 196608, 1, -1245177, 196608, 1, -1179641, 196608, 1, -1114105, 196608, 1, -1048569, 196608, 1, -1376248, 196608, 1, -1310712, 196608, 1, -1245176, 196608, 1, -1179640, 196608, 1, -1114104, 196608, 1, -1048568, 196608, 1, -1376247, 196608, 1, -1310711, 196608, 1, -1245175, 196608, 1, -1179639, 196608, 1, -1114103, 196608, 1, -1048567, 196608, 1, -1376246, 196608, 1, -1310710, 196608, 1, -1245174, 196608, 1, -1179638, 196608, 1, -1114102, 196608, 1, -1048566, 196608, 1, -1376245, 196608, 1, -1310709, 196608, 1, -1245173, 196608, 1, -1245199, 196608, 1, -1179663, 196608, 1, -1114127, 196608, 1, -1048591, 196608, 1, -983055, 196608, 1, -917519, 196608, 1, -851983, 196608, 1, -786447, 196608, 1, -720911, 196608, 1, -655375, 196608, 1, -589839, 196608, 1, -524303, 196608, 1, -458767, 196608, 1, -1245198, 196608, 1, -1179662, 196608, 1, -1114126, 196608, 1, -1048590, 196608, 1, -983054, 196608, 1, -917518, 196608, 1, -851982, 196608, 1, -786446, 196608, 1, -720910, 196608, 1, -655374, 196608, 1, -589838, 196608, 1, -524302, 196608, 1, -458766, 196608, 1, -1310736, 196608, 1, -1245200, 196608, 1, -1179664, 196608, 1, -1114128, 196608, 1, -1048592, 196608, 1, -983056, 196608, 1, -917520, 196608, 1, -851984, 196608, 1, -786448, 196608, 1, -720912, 196608, 1, -655376, 196608, 1, -589840, 196608, 1, -524304, 196608, 1, -458768, 196608, 1, -1310735, 196608, 1, -1310734, 196608, 1)
 layer_2/name = "Top"
 
-[node name="BrokenBridge" parent="." instance=ExtResource("8_7dqka")]
+[node name="BrokenBridge" parent="." instance=ExtResource("4_len3b")]
 position = Vector2(169, 6)
 collision_layer = 2
 collision_priority = 5.0
@@ -512,7 +512,7 @@ collision_priority = 5.0
 
 [node name="Enteties" type="Node" parent="GameObjects"]
 
-[node name="Player" parent="GameObjects/Enteties" instance=ExtResource("1_1ryak")]
+[node name="Player" parent="GameObjects/Enteties" instance=ExtResource("5_i4uej")]
 position = Vector2(223, -242)
 collision_mask = 3
 collision_priority = 1.515
@@ -527,7 +527,7 @@ drag_top_margin = 0.01
 drag_right_margin = 0.01
 drag_bottom_margin = 0.01
 
-[node name="crafting_station" parent="GameObjects" node_paths=PackedStringArray("player") instance=ExtResource("6_7pttj")]
+[node name="crafting_station" parent="GameObjects" node_paths=PackedStringArray("player") instance=ExtResource("6_oe4fx")]
 position = Vector2(417, -300)
 player = NodePath("../Enteties/Player")
 
@@ -537,108 +537,108 @@ player = NodePath("../Enteties/Player")
 
 [node name="FirstIsland" type="Node" parent="GameObjects/Objects/Plants"]
 
-[node name="Plant" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("8_864wn")]
+[node name="Plant" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(277, -331)
 
-[node name="Plant2" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("8_864wn")]
+[node name="Plant2" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(271, -228)
 
-[node name="Plant3" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("8_864wn")]
+[node name="Plant3" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(369, -213)
 
-[node name="Plant4" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("8_864wn")]
+[node name="Plant4" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(162, -198)
 
-[node name="Plant5" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("8_864wn")]
+[node name="Plant5" parent="GameObjects/Objects/Plants/FirstIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(192, -337)
 
 [node name="SecondIsland" type="Node" parent="GameObjects/Objects/Plants"]
 
-[node name="Plant" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(603, -154)
 
-[node name="Plant2" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant2" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(584, -162)
 
-[node name="Plant3" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant3" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(545, -306)
 
-[node name="Plant4" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant4" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(543, -288)
 
-[node name="Plant5" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant5" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(560, -295)
 
-[node name="Plant6" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant6" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(686, -288)
 
-[node name="Plant7" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant7" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(666, -292)
 
-[node name="Plant8" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant8" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(553, -195)
 
-[node name="Plant9" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant9" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(593, -150)
 
-[node name="Plant10" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant10" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(643, -292)
 
-[node name="Plant13" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant13" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(768, -164)
 
-[node name="Plant11" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant11" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(751, -166)
 
-[node name="Plant12" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant12" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(759, -170)
 
-[node name="Plant14" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant14" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(752, -257)
 
-[node name="Plant15" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant15" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(755, -243)
 
-[node name="Plant16" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant16" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(629, -236)
 
-[node name="Plant17" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant17" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(642, -233)
 
-[node name="Plant18" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("8_864wn")]
+[node name="Plant18" parent="GameObjects/Objects/Plants/SecondIsland" instance=ExtResource("7_u5s7t")]
 position = Vector2(654, -236)
 
 [node name="Trees" type="Node" parent="GameObjects/Objects"]
 
-[node name="Tree6" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree6" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(247, -306)
 
-[node name="Tree10" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree10" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(294, -314)
 
-[node name="Tree" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(189, -248)
 
-[node name="Tree3" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree3" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(114, -209)
 
-[node name="Tree5" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree5" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(156, -305)
 
-[node name="Tree7" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree7" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(217, -180)
 
-[node name="Tree8" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree8" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(286, -212)
 
-[node name="Tree9" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree9" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(365, -303)
 
-[node name="Tree12" parent="GameObjects/Objects/Trees" instance=ExtResource("5_8s3os")]
+[node name="Tree12" parent="GameObjects/Objects/Trees" instance=ExtResource("8_sctqq")]
 position = Vector2(354, -237)
 
-[node name="Sheep" parent="." instance=ExtResource("9_ew3t7")]
+[node name="Sheep" parent="." instance=ExtResource("9_v4cxd")]
 position = Vector2(331, 8)
 
-[node name="Sheep2" parent="." instance=ExtResource("9_ew3t7")]
+[node name="Sheep2" parent="." instance=ExtResource("9_v4cxd")]
 position = Vector2(374, 72)

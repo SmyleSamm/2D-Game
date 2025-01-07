@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://botb74tyiqe4k"]
 
-[ext_resource type="Script" uid="uid://da58wjrai0d76" path="res://inventory.gd" id="1_wilt2"]
+[ext_resource type="Script" uid="uid://da58wjrai0d76" path="res://ui/ui/inventory/inventory.gd" id="1_wilt2"]
 [ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_v6iuu"]
 [ext_resource type="Texture2D" uid="uid://gybsn2debeah" path="res://assets/Items/Material/Wood Log.png" id="3_lxq6w"]
 [ext_resource type="Texture2D" uid="uid://hpv4wspcx65w" path="res://assets/Items/Material/Rope.png" id="4_jhi4k"]

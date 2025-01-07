@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TimberAndTales"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/worlds/game.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="res://assets/sprites/portrait female.png"
 config/icon="res://assets/sprites/portrait female.png"
@@ -37,6 +37,17 @@ project/assembly_name="TimberAndTales"
 movie_writer/fps=165
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://objects/": "purple",
+"res://resources/": "orange",
+"res://scenes/": "yellow",
+"res://scripts/": "green",
+"res://ui/": "pink"
+}
 
 [input]
 

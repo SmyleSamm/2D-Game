@@ -1,14 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://b55lwecpo8ylh"]
+[gd_scene load_steps=16 format=3 uid="uid://b55lwecpo8ylh"]
 
-[ext_resource type="Script" uid="uid://dxcp20yhuff1v" path="res://crafting_station.gd" id="1_680vj"]
+[ext_resource type="Script" uid="uid://dxcp20yhuff1v" path="res://scripts/crafting_station.gd" id="1_680vj"]
 [ext_resource type="Texture2D" uid="uid://clir0wep20mrp" path="res://assets/sprites/SRW_Marketplace_tileset_B.png" id="2_haads"]
 [ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="3_su0yg"]
-[ext_resource type="PackedScene" uid="uid://buh80fmiavo1m" path="res://crafting_station_ui.tscn" id="4_uf7w3"]
+[ext_resource type="PackedScene" uid="uid://buh80fmiavo1m" path="res://ui/ui/crafting_station_ui.tscn" id="4_uf7w3"]
 [ext_resource type="Texture2D" uid="uid://gybsn2debeah" path="res://assets/Items/Material/Wood Log.png" id="5_4eju8"]
+[ext_resource type="Script" path="res://RecourceToItem.gd" id="6_eg64c"]
 [ext_resource type="Texture2D" uid="uid://djff8g8874i45" path="res://assets/Items/Material/Wooden Plank.png" id="6_rmjai"]
 [ext_resource type="Texture2D" uid="uid://hpv4wspcx65w" path="res://assets/Items/Material/Rope.png" id="7_bpaap"]
 [ext_resource type="Texture2D" uid="uid://d0sws7d35kij6" path="res://assets/Items/Material/String.png" id="8_tupxo"]
-[ext_resource type="PackedScene" uid="uid://ddf2gmmxpckw3" path="res://RecourceToItem.tscn" id="11_5wr1h"]
+[ext_resource type="PackedScene" uid="uid://ddf2gmmxpckw3" path="res://ui/elements/crafting/RecourceToItem.tscn" id="11_5wr1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxy2h"]
 size = Vector2(20, 18)
@@ -85,6 +86,7 @@ libraries = {
 
 [node name="RecourceToItem" parent="CanvasLayer/CraftingStationUI/ScrollContainer/VBoxContainer" index="0" instance=ExtResource("11_5wr1h")]
 layout_mode = 2
+script = ExtResource("6_eg64c")
 recourcesNeeded = Dictionary[String, int]({
 "Wood": 10
 })
@@ -96,6 +98,7 @@ spriteOfItem = ExtResource("6_rmjai")
 
 [node name="RecourceToItem2" parent="CanvasLayer/CraftingStationUI/ScrollContainer/VBoxContainer" index="1" instance=ExtResource("11_5wr1h")]
 layout_mode = 2
+script = ExtResource("6_eg64c")
 recourcesNeeded = Dictionary[String, int]({
 "Rope": 10
 })
@@ -107,6 +110,7 @@ spriteOfItem = ExtResource("8_tupxo")
 
 [node name="RecourceToItem3" parent="CanvasLayer/CraftingStationUI/ScrollContainer/VBoxContainer" index="2" instance=ExtResource("11_5wr1h")]
 layout_mode = 2
+script = ExtResource("6_eg64c")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
