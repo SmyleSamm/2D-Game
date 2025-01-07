@@ -1,13 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://b628mo3cy8k85"]
+[gd_scene load_steps=15 format=4 uid="uid://cj4qecbhvbkjb"]
 
-[ext_resource type="Script" uid="uid://w0gso1xut3ci" path="res://scripts/bridge.gd" id="1_iawbp"]
-[ext_resource type="Texture2D" uid="uid://ub2bj64vjg35" path="res://assets/sprites/summer tilemap.png" id="2_uxbej"]
-[ext_resource type="Texture2D" uid="uid://b03dlpowhvupg" path="res://assets/sprites/summer and spring items.png" id="3_k6yt3"]
-[ext_resource type="Texture2D" uid="uid://cw6ugnyn6a346" path="res://assets/sprites/farm bridges free.png" id="4_qvykk"]
-[ext_resource type="PackedScene" uid="uid://d2ilmeu8vwnec" path="res://scenes/disable_collission.tscn" id="5_uhum5"]
+[ext_resource type="Script" uid="uid://djtw6jf5txd48" path="res://objects/gameObjects/bridge/broken/broken_bridge.gd" id="1_tcgns"]
+[ext_resource type="Texture2D" uid="uid://ub2bj64vjg35" path="res://assets/sprites/summer tilemap.png" id="2_2y53k"]
+[ext_resource type="Texture2D" uid="uid://b03dlpowhvupg" path="res://assets/sprites/summer and spring items.png" id="3_2ixgg"]
+[ext_resource type="Texture2D" uid="uid://cw6ugnyn6a346" path="res://assets/sprites/farm bridges free.png" id="4_eutp8"]
+[ext_resource type="PackedScene" uid="uid://d2ilmeu8vwnec" path="res://objects/gameObjects/disableCollision/disable_collission.tscn" id="5_i5wjg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2n66f"]
-texture = ExtResource("2_uxbej")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5eeq"]
+texture = ExtResource("2_2y53k")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -171,8 +171,8 @@ texture = ExtResource("2_uxbej")
 6:14/0 = 0
 7:14/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fknot"]
-texture = ExtResource("3_k6yt3")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5c8vn"]
+texture = ExtResource("3_2ixgg")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -334,8 +334,8 @@ texture = ExtResource("3_k6yt3")
 10:16/0 = 0
 11:16/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go1gu"]
-texture = ExtResource("4_qvykk")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o8y2g"]
+texture = ExtResource("4_eutp8")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -485,41 +485,92 @@ texture = ExtResource("4_qvykk")
 8:10/0 = 0
 9:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_7yrdj"]
+[sub_resource type="TileSet" id="TileSet_2qcvl"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 4
-sources/0 = SubResource("TileSetAtlasSource_2n66f")
-sources/1 = SubResource("TileSetAtlasSource_fknot")
-sources/2 = SubResource("TileSetAtlasSource_go1gu")
+sources/0 = SubResource("TileSetAtlasSource_e5eeq")
+sources/1 = SubResource("TileSetAtlasSource_5c8vn")
+sources/2 = SubResource("TileSetAtlasSource_o8y2g")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i4uo"]
-size = Vector2(139, 34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m8ed"]
+size = Vector2(38.75, 31)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bckd7"]
-size = Vector2(128, 2)
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwy32"]
+radius = 25.02
 
-[node name="Bridge" type="Node2D"]
-script = ExtResource("1_iawbp")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2no7"]
+size = Vector2(32, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvs5j"]
+size = Vector2(32, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e7l3l"]
+size = Vector2(33, 2)
+
+[node name="BrokenBridge" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_tcgns")
 
 [node name="Mid" type="TileMapLayer" parent="."]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD/////AgAAAAgAAAAAAP//AgABAAgAAAABAP//AgABAAgAAAACAP//AgABAAgAAAADAP//AgABAAgAAAAEAP//AgABAAgAAAAFAP//AgABAAgAAAAGAP//AgACAAgAAAAGAAAAAgAFAAYAAAAGAP7/AgAFAAQAAAD///7/AgADAAQAAAD//wAAAgADAAYAAAAAAAAAAgAEAAYAAAABAAAAAgAEAAYAAAACAAAAAgAEAAYAAAADAAAAAgAEAAYAAAAEAAAAAgAEAAYAAAAFAAAAAgAEAAYAAAAFAP7/AgABAAcAAAAEAP7/AgABAAcAAAADAP7/AgABAAcAAAACAP7/AgABAAcAAAABAP7/AgABAAcAAAAAAP7/AgABAAcAAAA=")
-tile_set = SubResource("TileSet_7yrdj")
+tile_map_data = PackedByteArray("AAD/////AgAAAAgAAAAAAP//AgABAAgAAAAFAP//AgABAAgAAAAGAP//AgACAAgAAAAGAAAAAgAFAAYAAAAGAP7/AgAFAAQAAAD///7/AgADAAQAAAD//wAAAgADAAYAAAAAAAAAAgAEAAYAAAAFAAAAAgAEAAYAAAAFAP7/AgABAAcAAAAAAP7/AgABAAcAAAA=")
+tile_set = SubResource("TileSet_2qcvl")
 
-[node name="DisableCollission" parent="." instance=ExtResource("5_uhum5")]
+[node name="DisableCollission" parent="." instance=ExtResource("5_i5wjg")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DisableCollission"]
-position = Vector2(48.5, -9)
-shape = SubResource("RectangleShape2D_6i4uo")
+position = Vector2(-3.25, -10.5)
+shape = SubResource("RectangleShape2D_5m8ed")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DisableCollission"]
+position = Vector2(99, -11)
+shape = SubResource("RectangleShape2D_5m8ed")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rwy32")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(100, 0)
+shape = SubResource("CircleShape2D_rwy32")
+
+[node name="Walls" type="StaticBody2D" parent="."]
 collision_layer = 2
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(48, -27)
-shape = SubResource("RectangleShape2D_bckd7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, -27)
+shape = SubResource("RectangleShape2D_a2no7")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(48, 4)
-shape = SubResource("RectangleShape2D_bckd7")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kvs5j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(17, -12)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_e7l3l")
+
+[node name="Walls2" type="StaticBody2D" parent="."]
+position = Vector2(96, 0)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls2"]
+position = Vector2(0, -27)
+shape = SubResource("RectangleShape2D_a2no7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls2"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_kvs5j")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls2"]
+position = Vector2(-17, -11.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_e7l3l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

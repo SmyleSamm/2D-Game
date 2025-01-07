@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://b55lwecpo8ylh"]
 
-[ext_resource type="Script" uid="uid://dxcp20yhuff1v" path="res://scripts/crafting_station.gd" id="1_680vj"]
+[ext_resource type="Script" uid="uid://dxcp20yhuff1v" path="res://objects/gameObjects/craftingStations/craftingTable/crafting_station.gd" id="1_680vj"]
 [ext_resource type="Texture2D" uid="uid://clir0wep20mrp" path="res://assets/sprites/SRW_Marketplace_tileset_B.png" id="2_haads"]
 [ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="3_su0yg"]
 [ext_resource type="PackedScene" uid="uid://buh80fmiavo1m" path="res://ui/ui/crafting_station_ui.tscn" id="4_uf7w3"]

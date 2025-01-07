@@ -3,10 +3,14 @@
 [ext_resource type="Script" uid="uid://r1kdxhel0057" path="res://ui/elements/crafting/recources_to_items_preset.gd" id="1_diwuj"]
 [ext_resource type="PackedScene" uid="uid://c0t0p3ex5rct2" path="res://ui/elements/crafting/ItemContainer.tscn" id="1_jt8re"]
 [ext_resource type="PackedScene" uid="uid://b7s13l0iwkb3f" path="res://ui/elements/crafting/item.tscn" id="2_diwuj"]
-[ext_resource type="Resource" uid="uid://052c323f6ua7" path="res://resources/craftItems/new_resource.tres" id="2_opr3m"]
-[ext_resource type="Script" uid="uid://7142216xequn" path="res://scripts/recepie.gd" id="3_d5olm"]
+[ext_resource type="Script" uid="uid://7142216xequn" path="res://resources/recepies/recepie.gd" id="3_d5olm"]
 [ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_m4vak"]
 [ext_resource type="PackedScene" uid="uid://dqxc2ywgfrl8" path="res://ui/elements/crafting/crafting_container.tscn" id="4_ntqya"]
+
+[sub_resource type="Resource" id="Resource_68s88"]
+script = ExtResource("3_d5olm")
+targetItem = Dictionary[int, Resource]({})
+recourcesNeeded = Dictionary[int, Resource]({})
 
 [node name="RecourcesToItemsPreset" type="Control"]
 layout_mode = 3
@@ -17,7 +21,7 @@ offset_bottom = -260.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_diwuj")
-sprite_recources = Array[Resource]([ExtResource("2_opr3m"), ExtResource("2_opr3m"), ExtResource("3_d5olm")])
+sprite_recources = Array[Resource]([SubResource("Resource_68s88"), SubResource("Resource_68s88"), ExtResource("3_d5olm")])
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
