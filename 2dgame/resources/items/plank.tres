@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://b10e0166kktef"]
+
+[ext_resource type="Script" uid="uid://2008e8a6ed2w" path="res://scripts/item.gd" id="1_uedmx"]
+[ext_resource type="Texture2D" uid="uid://djff8g8874i45" path="res://assets/Items/Material/Wooden Plank.png" id="2_8xfwv"]
+
+[resource]
+script = ExtResource("1_uedmx")
+name = "Plank"
+texture = ExtResource("2_8xfwv")
+metadata/_custom_type_script = ExtResource("1_uedmx")

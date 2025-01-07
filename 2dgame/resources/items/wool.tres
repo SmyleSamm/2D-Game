@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="item" load_steps=3 format=3 uid="uid://bbpwh4f7oxwyb"]
+
+[ext_resource type="Script" uid="uid://2008e8a6ed2w" path="res://scripts/item.gd" id="1_ks48l"]
+[ext_resource type="Texture2D" uid="uid://c35rbsp1r4jr" path="res://assets/Items/Material/Wool.png" id="2_i6qug"]
+
+[resource]
+script = ExtResource("1_ks48l")
+name = "Wool"
+texture = ExtResource("2_i6qug")
+metadata/_custom_type_script = ExtResource("1_ks48l")

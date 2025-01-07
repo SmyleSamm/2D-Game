@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="recepie" load_steps=4 format=3 uid="uid://6ik2163g3k8d"]
+
+[ext_resource type="Script" uid="uid://7142216xequn" path="res://scripts/recepie.gd" id="1_0u65k"]
+[ext_resource type="Resource" uid="uid://ckuilu8fmqwsw" path="res://resources/items/rope.tres" id="2_4mvm8"]
+[ext_resource type="Resource" uid="uid://bgy2h4niaceep" path="res://resources/items/string.tres" id="3_a6mhl"]
+
+[resource]
+script = ExtResource("1_0u65k")
+targetItem = Dictionary[int, Resource]({
+1: ExtResource("3_a6mhl")
+})
+recourcesNeeded = Dictionary[int, Resource]({
+10: ExtResource("2_4mvm8")
+})
+metadata/_custom_type_script = ExtResource("1_0u65k")
