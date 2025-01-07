@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqxc2ywgfrl8"]
+
+[ext_resource type="Script" uid="uid://bsx2t1evddurv" path="res://crafting_container.gd" id="1_1ngf7"]
+[ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_01v1b"]
+[ext_resource type="FontFile" uid="uid://dtnklu3br6a36" path="res://assets/fonts/PixelOperator8.ttf" id="2_1ngf7"]
+[ext_resource type="PackedScene" uid="uid://c0t0p3ex5rct2" path="res://ItemContainer.tscn" id="3_0w1p0"]
+
+[node name="CraftingContainer" type="Control"]
+layout_mode = 3
+anchor_right = 0.320313
+anchor_bottom = 0.141667
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ngf7")
+metadata/_edit_use_anchors_ = true
+
+[node name="craft" type="Button" parent="."]
+layout_mode = 2
+offset_top = 11.0
+offset_right = 84.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("1_01v1b")
+theme_override_font_sizes/font_size = 16
+text = "Craft"
+metadata/action = "craft"
+metadata/item_name = "Planks"
+
+[node name="decrease" type="Button" parent="."]
+layout_mode = 2
+offset_left = 216.0
+offset_top = 40.0
+offset_right = 236.0
+offset_bottom = 80.0
+scale = Vector2(1, 0.5)
+theme_override_fonts/font = ExtResource("2_1ngf7")
+theme_override_font_sizes/font_size = 16
+text = "-
+"
+metadata/action = "decrease"
+metadata/item_name = "Planks"
+
+[node name="increase" type="Button" parent="."]
+layout_mode = 2
+offset_left = 216.0
+offset_top = 10.0
+offset_right = 238.0
+offset_bottom = 50.0
+scale = Vector2(1, 0.5)
+theme_override_fonts/font = ExtResource("2_1ngf7")
+theme_override_font_sizes/font_size = 16
+text = "+"
+metadata/action = "increase"
+metadata/item_name = "Planks"
+
+[node name="Control" parent="." instance=ExtResource("3_0w1p0")]
+layout_mode = 1
+offset_left = 84.0
+offset_right = 172.359
+offset_bottom = 58.3667
+
+[connection signal="pressed" from="craft" to="." method="_on_craft_pressed"]
+[connection signal="pressed" from="decrease" to="." method="_on_decrease_pressed"]
+[connection signal="pressed" from="increase" to="." method="_on_increase_pressed"]
+
+[editable path="Control"]

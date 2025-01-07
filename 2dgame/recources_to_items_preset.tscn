@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm210ci7jbmrs"]
+
+[ext_resource type="PackedScene" uid="uid://c0t0p3ex5rct2" path="res://ItemContainer.tscn" id="1_jt8re"]
+[ext_resource type="PackedScene" uid="uid://b7s13l0iwkb3f" path="res://item.tscn" id="2_diwuj"]
+[ext_resource type="FontFile" uid="uid://dql3ueqlybm1c" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_m4vak"]
+[ext_resource type="PackedScene" uid="uid://dqxc2ywgfrl8" path="res://crafting_container.tscn" id="4_ntqya"]
+
+[node name="RecourcesToItemsPreset" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemContainer1" parent="HBoxContainer" instance=ExtResource("1_jt8re")]
+layout_mode = 2
+
+[node name="Item" parent="HBoxContainer/ItemContainer1/ScrollContainer/VBoxContainer" index="0" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item2" parent="HBoxContainer/ItemContainer1/ScrollContainer/VBoxContainer" index="1" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item3" parent="HBoxContainer/ItemContainer1/ScrollContainer/VBoxContainer" index="2" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item4" parent="HBoxContainer/ItemContainer1/ScrollContainer/VBoxContainer" index="3" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item5" parent="HBoxContainer/ItemContainer1/ScrollContainer/VBoxContainer" index="4" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="to" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_m4vak")
+theme_override_font_sizes/font_size = 16
+text = "->"
+
+[node name="ItemContainer2" parent="HBoxContainer" instance=ExtResource("1_jt8re")]
+layout_mode = 2
+
+[node name="Item" parent="HBoxContainer/ItemContainer2/ScrollContainer/VBoxContainer" index="0" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item2" parent="HBoxContainer/ItemContainer2/ScrollContainer/VBoxContainer" index="1" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item3" parent="HBoxContainer/ItemContainer2/ScrollContainer/VBoxContainer" index="2" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="CraftingContainer" parent="HBoxContainer" instance=ExtResource("4_ntqya")]
+layout_mode = 2
+
+[node name="craft" parent="HBoxContainer/CraftingContainer" index="0"]
+offset_top = 31.0
+offset_bottom = 71.0
+
+[node name="decrease" parent="HBoxContainer/CraftingContainer" index="1"]
+offset_top = 57.0
+offset_bottom = 97.0
+
+[node name="increase" parent="HBoxContainer/CraftingContainer" index="2"]
+offset_top = 22.0
+offset_bottom = 62.0
+
+[node name="Control" parent="HBoxContainer/CraftingContainer" index="3"]
+custom_minimum_size = Vector2(130, 100)
+offset_left = 85.0
+offset_right = 215.0
+offset_bottom = 81.1111
+
+[node name="Item" parent="HBoxContainer/CraftingContainer/Control/ScrollContainer/VBoxContainer" index="0" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item2" parent="HBoxContainer/CraftingContainer/Control/ScrollContainer/VBoxContainer" index="1" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[node name="Item3" parent="HBoxContainer/CraftingContainer/Control/ScrollContainer/VBoxContainer" index="2" instance=ExtResource("2_diwuj")]
+layout_mode = 2
+
+[editable path="HBoxContainer/ItemContainer1"]
+[editable path="HBoxContainer/ItemContainer2"]
+[editable path="HBoxContainer/CraftingContainer"]
+[editable path="HBoxContainer/CraftingContainer/Control"]
