@@ -14,7 +14,7 @@ func _on_timer_timeout() -> void:
 	queue_free()
 
 func spawn_tree():
-	var tree_scene = load("res://scenes/trees.tscn")
+	var tree_scene = load("res://objects/vegetation/trees/normalTree/grown/trees.tscn")
 	if tree_scene == null:
 		print("Error loading tree_scene")
 		return

@@ -3,10 +3,7 @@ extends StaticBody2D
 @export var player: CharacterBody2D
 var isInside:bool = false
 
-var craftingAmounts : Dictionary[String, int]= {
-	"Planks": 0,
-	"Strings": 0
-}
+var craftingAmounts
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var crafting_station_ui: Control = $CanvasLayer/CraftingStationUI

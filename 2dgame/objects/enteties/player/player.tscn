@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://qo3l14yvp1j"]
+[gd_scene load_steps=18 format=3 uid="uid://qo3l14yvp1j"]
 
 [ext_resource type="Script" uid="uid://de283k4tc2f5y" path="res://objects/enteties/player/character_body_2d.gd" id="1_pxf4r"]
 [ext_resource type="PackedScene" uid="uid://botb74tyiqe4k" path="res://ui/ui/inventory/inventory.tscn" id="3_6gw0s"]
 [ext_resource type="Texture2D" uid="uid://d1c14f0ueahd5" path="res://assets/sprites/walk and idle.png" id="3_m4vet"]
 [ext_resource type="Script" uid="uid://p20j8y2sgrkl" path="res://ui/ui/menus/esc/esc_menu.gd" id="4_8q04y"]
 [ext_resource type="PackedScene" uid="uid://b30p07rl0qxj4" path="res://ui/ui/menus/esc/esc_menu.tscn" id="4_iqtxg"]
-[ext_resource type="Script" path="res://scripts/inventory.gd" id="6_7wexw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bcu3j"]
 atlas = ExtResource("3_m4vet")
@@ -118,5 +117,4 @@ shape = SubResource("RectangleShape2D_dvlpy")
 script = ExtResource("4_8q04y")
 
 [node name="Inventory" parent="UI" node_paths=PackedStringArray("player") instance=ExtResource("3_6gw0s")]
-script = ExtResource("6_7wexw")
 player = NodePath("../..")

@@ -7,7 +7,7 @@ var player
 var hp = 5
 
 @onready var timer = $Timer
-@onready var stump_scene = preload("res://scenes/tree_stump.tscn")
+@onready var stump_scene = preload("res://objects/vegetation/trees/normalTree/harvested/tree_stump.tscn")
 @onready var tree: Sprite2D = $Tree
 
 func checkIfPlayerBehindTree():

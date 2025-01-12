@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var area: Area2D = $Area2D
-@onready var bridge = preload("res://bridge.tscn")
+@onready var bridge = preload("res://objects/gameObjects/bridge/complete/bridge.tscn")
 
 var player
 var playerInside

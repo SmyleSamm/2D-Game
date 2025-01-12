@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ca1fgc25b6y4t"]
 
 [ext_resource type="Texture2D" uid="uid://cp1xoypqkqwnm" path="res://assets/sprites/farm objects free.png" id="1_n0qps"]
-[ext_resource type="Script" uid="uid://bcavjf3jge78" path="res://objects/vegetation/trees/normalTree/grown/trees.gd" id="1_wt4ic"]
+[ext_resource type="Script" path="res://objects/vegetation/trees/normalTree/grown/trees.gd" id="1_wt4ic"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wqyn"]
 size = Vector2(2.43902, 2.22222)
